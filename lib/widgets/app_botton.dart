@@ -5,7 +5,8 @@ class AppBotton extends StatelessWidget {
     super.key,
     required this.text,
     required this.color,
-    required this.textColor, this.iconData,
+    required this.textColor,
+    this.iconData,
   });
 
   final String text;
@@ -27,40 +28,35 @@ class AppBotton extends StatelessWidget {
         );
       },
       child: Container(
-        
         padding: EdgeInsets.symmetric(vertical: 24.5),
 
         width: double.infinity,
         decoration: BoxDecoration(
-
-         
           color: color,
           borderRadius: BorderRadius.circular(19),
         ),
         child: Center(
-          
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.17),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Icon(iconData,color: Color(0xff53B175),),
-            
-            SizedBox(width: 90,),
-            
-             Text(
-              text,
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight(600),
-                color: textColor,
-              ),
-            ),],
+              children: [
+                Icon(iconData, color: Color(0xff53B175)),
+
+                SizedBox(width: 90),
+
+                Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight(600),
+                    color: textColor,
+                  ),
+                ),
+              ],
             ),
           ),
-         
         ),
-        
       ),
     );
   }

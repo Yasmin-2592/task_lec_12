@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AccountHeader extends StatelessWidget {
-  const AccountHeader({super.key, required this.text, required this.email, required this.imagePath,});
+  const AccountHeader({
+    super.key,
+    required this.text,
+    required this.email,
+    required this.imagePath,
+  });
 
   final String text;
   final String email;
@@ -47,7 +52,7 @@ class AccountHeader extends StatelessWidget {
                 ),
                 SizedBox(height: 4),
                 Text(
-                 email,
+                  email,
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
